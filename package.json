@@ -24,7 +24,7 @@
     "docker:down": "docker compose down",
     "docker:logs": "docker compose logs -f",
     "docker:clean": "docker compose down -v && rm -rf docker-data",
-    "dev:setup": "cp apps/web/.env.example apps/web/.env 2>/dev/null || true && cp apps/admin/.env.example apps/admin/.env 2>/dev/null || true && cp apps/api/.env.example apps/api/.env 2>/dev/null || true",
+    "project:setup": "cp apps/web/.env.example apps/web/.env 2>/dev/null || true && cp apps/admin/.env.example apps/admin/.env 2>/dev/null || true && cp apps/api/.env.example apps/api/.env 2>/dev/null || true",
     "db:migrate": "cd apps/api && node scripts/migrate.js",
     "db:seed": "cd apps/api && node scripts/seed.js",
     "db:reset": "yarn docker:clean && yarn docker:up && sleep 10 && yarn db:migrate && yarn db:seed"
