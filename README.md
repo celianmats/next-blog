@@ -36,17 +36,19 @@ yarn install
 ```
 
 ### 2. Configuration Environnement (.env)
-Configurez automatiquement les fichiers d'environnement pour toutes les applications :
+Configurez les fichiers d'environnement pour toutes les applications :
 ```bash
-yarn dev:setup
+cp apps/www/.env.example apps/www/.env
+cp apps/admin/.env.example apps/admin/.env
+cp apps/api/.env.example apps/api/.env
+cp apps/assets/.env.example apps/assets/.env
 ```
 
 ### 3. Lancer l'infrastructure
 Démarrez les services essentiels (Postgres, Redis, Elasticsearch) :
 ```bash
-yarn docker:up
+docker compose up -d
 ```
-
 
 ### 5. Lancer le développement
 Lancez tout le monorepo en une commande :
