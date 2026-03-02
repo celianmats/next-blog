@@ -50,7 +50,7 @@ Démarrez les services essentiels (Postgres, Redis, Elasticsearch) :
 docker compose up -d
 ```
 
-### 5. Lancer le développement
+### 4. Lancer le développement
 Lancez tout le monorepo en une commande :
 ```bash
 yarn dev
