@@ -1,0 +1,5 @@
+**/node_modules
+**/*.min.js
+**/*.min.css
+/apps/*/graphql/*/__generated__/gql/**/*.ts
+/packages/slate-react

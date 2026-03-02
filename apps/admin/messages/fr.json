@@ -1,0 +1,16 @@
+{
+    "Navigation": {
+        "home": "Accueil",
+        "categories": "Catégories",
+        "about": "À propos",
+        "search": "Rechercher des articles..."
+    },
+    "Auth": {
+        "login": "Se connecter",
+        "register": "Créer un compte"
+    },
+    "Footer": {
+        "description": "Une plateforme d'actualités légère",
+        "rights": "Tous droits réservés."
+    }
+}

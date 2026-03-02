@@ -1,0 +1,178 @@
+# ================================
+# Frontend Environment Variables
+# apps/web/.env.local
+# ================================
+
+# API Configuration
+NEXT_PUBLIC_API_URL=http://localhost:5010/graphql
+NEXT_PUBLIC_API_WS_URL=ws://localhost:5010/graphql
+
+# Site Configuration
+NEXT_PUBLIC_SITE_NAME=Republik
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_DESCRIPTION=Independent journalism for a democratic society
+
+# Localization
+NEXT_PUBLIC_DEFAULT_LOCALE=en
+NEXT_PUBLIC_LOCALES=en,fr,ar
+
+# Analytics (optional)
+NEXT_PUBLIC_GA_ID=
+NEXT_PUBLIC_PLAUSIBLE_DOMAIN=
+
+# Feature Flags
+NEXT_PUBLIC_ENABLE_COMMENTS=true
+NEXT_PUBLIC_ENABLE_NEWSLETTER=true
+NEXT_PUBLIC_ENABLE_SEARCH=true
+
+# ================================
+# Backend Environment Variables
+# apps/api/.env
+# ================================
+
+# Server
+NODE_ENV=development
+PORT=5010
+HOST=localhost
+
+# Database
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/republik
+DATABASE_POOL_MIN=2
+DATABASE_POOL_MAX=10
+
+# Redis
+REDIS_URL=redis://localhost:6379
+REDIS_PASSWORD=
+REDIS_DB=0
+
+# Elasticsearch
+ELASTICSEARCH_URL=http://localhost:9200
+ELASTICSEARCH_INDEX_PREFIX=republik_
+
+# Authentication
+JWT_SECRET=change-this-to-a-secure-random-string-in-production
+JWT_EXPIRES_IN=7d
+REFRESH_TOKEN_SECRET=change-this-to-another-secure-random-string
+REFRESH_TOKEN_EXPIRES_IN=30d
+
+# Cookies
+COOKIE_NAME=republik_token
+COOKIE_SECRET=change-this-cookie-secret
+COOKIE_DOMAIN=localhost
+COOKIE_SECURE=false
+COOKIE_HTTPONLY=true
+COOKIE_SAMESITE=lax
+
+# CORS
+CORS_ORIGIN=http://localhost:3000,http://localhost:3005,http://localhost:3010
+CORS_CREDENTIALS=true
+
+# Email (using SendGrid, Mailgun, or SMTP)
+EMAIL_FROM=noreply@republik.local
+EMAIL_FROM_NAME=Republik
+EMAIL_PROVIDER=smtp
+
+# SMTP Configuration
+SMTP_HOST=localhost
+SMTP_PORT=1025
+SMTP_USER=
+SMTP_PASSWORD=
+SMTP_SECURE=false
+
+# SendGrid (alternative)
+SENDGRID_API_KEY=
+
+# Mailgun (alternative)
+MAILGUN_API_KEY=
+MAILGUN_DOMAIN=
+
+# File Storage (S3 or local)
+STORAGE_PROVIDER=local
+STORAGE_LOCAL_PATH=./uploads
+
+# AWS S3 Configuration
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=republik-media
+AWS_S3_PUBLIC_URL=
+
+# Cloudinary (alternative)
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Logging
+LOG_LEVEL=debug
+LOG_FORMAT=json
+
+# Frontend URLs
+FRONTEND_BASE_URL=http://localhost:3000
+ADMIN_BASE_URL=http://localhost:3005
+
+# Newsletter
+NEWSLETTER_UNSUBSCRIBE_SECRET=change-this-secret
+
+# Search
+SEARCH_ENABLED=true
+SEARCH_RESULTS_PER_PAGE=10
+
+# ================================
+# Admin Frontend Environment Variables
+# apps/admin/.env.local
+# ================================
+
+NEXT_PUBLIC_API_URL=http://localhost:5010/graphql
+NEXT_PUBLIC_API_WS_URL=ws://localhost:5010/graphql
+NEXT_PUBLIC_ADMIN_TITLE=Republik Admin
+NEXT_PUBLIC_DEFAULT_LOCALE=en
+
+# ================================
+# Docker Compose Environment Variables
+# .env (root directory)
+# ================================
+
+# PostgreSQL
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=republik
+POSTGRES_PORT=5432
+
+# Redis
+REDIS_PORT=6379
+
+# Elasticsearch
+ELASTICSEARCH_PORT=9200
+ES_JAVA_OPTS=-Xms512m -Xmx512m
+
+# Kibana
+KIBANA_PORT=5601
+
+# pgAdmin
+PGADMIN_EMAIL=admin@republik.local
+PGADMIN_PASSWORD=admin
+PGADMIN_PORT=5050
+
+# ================================
+# Production Environment Notes
+# ================================
+
+# CRITICAL: Change these in production!
+# - JWT_SECRET and REFRESH_TOKEN_SECRET: Use cryptographically secure random strings
+# - COOKIE_SECRET: Use a secure random string
+# - DATABASE_URL: Use production database credentials
+# - SMTP/Email credentials: Configure with real email service
+# - COOKIE_SECURE: Set to true in production
+# - NODE_ENV: Set to 'production'
+# - Enable HTTPS/SSL
+# - Configure proper CORS_ORIGIN
+# - Set up proper logging and monitoring
+# - Configure CDN for static assets
+# - Use environment-specific secrets management (AWS Secrets Manager, etc.)
+
+# To generate secure secrets:
+# node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"

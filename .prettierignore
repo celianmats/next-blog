@@ -1,0 +1,15 @@
+node_modules
+
+**/*.min.js
+**/*.min.css
+
+.idea
+.next
+.turbo
+.cache
+dist
+build
+
+/apps/www/src/graphql/*/gql/**/*.ts
+
+/packages/backend-modules/**/*.html

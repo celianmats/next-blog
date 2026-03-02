@@ -1,0 +1,48 @@
+{
+  "name": "republik-multisite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-language news platform inspired by Republik with RTL support",
+  "author": "Your Name",
+  "license": "BSD-3-Clause",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:api": "turbo run dev --filter=api",
+    "dev:admin": "turbo run dev --filter=admin",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "docker:clean": "docker compose down -v && rm -rf docker-data",
+    "db:migrate": "cd apps/api && node scripts/migrate.js",
+    "db:seed": "cd apps/api && node scripts/seed.js",
+    "db:reset": "yarn docker:clean && yarn docker:up && sleep 10 && yarn db:migrate && yarn db:seed"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "^14.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.1.0",
+    "turbo": "^1.11.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": [
+        "NEXT_PUBLIC_API_URL",
+        "NEXT_PUBLIC_API_WS_URL",
+        "NEXT_PUBLIC_DEFAULT_LOCALE",
+        "NEXT_PUBLIC_LOCALES",
+        "NEXT_PUBLIC_SITE_NAME",
+        "NEXT_PUBLIC_SITE_URL"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": [],
+      "cache": true
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "cache": true,
+      "dependsOn": ["build"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "type-check": {
+      "outputs": [],
+      "cache": true
+    }
+  }
+}

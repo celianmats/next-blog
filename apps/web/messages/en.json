@@ -1,0 +1,26 @@
+{
+    "siteName": "Republik",
+    "nav": {
+        "home": "Home",
+        "articles": "Articles",
+        "categories": "Categories",
+        "about": "About",
+        "search": "Search articles..."
+    },
+    "hero": {
+        "title": "Independent Journalism for a Democratic Society",
+        "subtitle": "We believe in quality over clicks. Join us in supporting journalism that matters."
+    },
+    "common": {
+        "readMore": "Read More",
+        "publishedOn": "Published on"
+    },
+    "Auth": {
+        "login": "Login",
+        "register": "Create Account"
+    },
+    "Footer": {
+        "description": "A lightweight news platform",
+        "rights": "All rights reserved."
+    }
+}

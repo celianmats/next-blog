@@ -1,0 +1,16 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "categories": "Categories",
+        "about": "About",
+        "search": "Search articles..."
+    },
+    "Auth": {
+        "login": "Sign In",
+        "register": "Create Account"
+    },
+    "Footer": {
+        "description": "A lightweight news platform",
+        "rights": "All rights reserved."
+    }
+}

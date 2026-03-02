@@ -1,0 +1,26 @@
+{
+    "siteName": "Republik",
+    "nav": {
+        "home": "Accueil",
+        "articles": "Articles",
+        "categories": "Catégories",
+        "about": "À propos",
+        "search": "Rechercher des articles..."
+    },
+    "hero": {
+        "title": "Journalisme indépendant pour une société démocratique",
+        "subtitle": "Nous croyons en la qualité plutôt qu'aux clics. Rejoignez-nous pour soutenir un journalisme qui compte."
+    },
+    "common": {
+        "readMore": "Lire la suite",
+        "publishedOn": "Publié le"
+    },
+    "Auth": {
+        "login": "Se connecter",
+        "register": "Créer un compte"
+    },
+    "Footer": {
+        "description": "Une plateforme d'actualités légère",
+        "rights": "Tous droits réservés."
+    }
+}
