@@ -71,7 +71,6 @@ Accès :
 |----------|-------------|
 | `yarn dev` | Lance tous les services en développement |
 | `yarn build` | Build tous les services pour la production |
-| `yarn project:setup` | **Nouveau** : Configure tous les fichiers `.env` |
 | `yarn docker:up` | Démarre les containers Docker |
 | `yarn db:migrate` | Applique les migrations SQL (recommandé) |
 | `yarn db:seed` | Ajoute les données de démonstration |
