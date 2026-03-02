@@ -28,7 +28,7 @@ Ce projet est un monorepo géré par [Turborepo](https://turbo.build/) contenant
 ### 1. Installation & Récupération de la plateforme
 ```bash
 # Cloner le dépôt Republik pour les assets et la structure de base
-git clone https://github.com/republik/plattform.git mon-blog
+git clone https://github.com/celianmats/next-blog.git mon-blog
 cd mon-blog
 
 # Installer les dépendances du monorepo actuel
