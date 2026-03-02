@@ -47,12 +47,6 @@ Démarrez les services essentiels (Postgres, Redis, Elasticsearch) :
 yarn docker:up
 ```
 
-### 4. Initialiser la base de données
-Appliquez le schéma initial sans supprimer vos données :
-```bash
-yarn db:migrate
-yarn db:seed
-```
 
 ### 5. Lancer le développement
 Lancez tout le monorepo en une commande :
