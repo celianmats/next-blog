@@ -38,10 +38,8 @@ yarn install
 ### 2. Configuration Environnement (.env)
 Configurez les fichiers d'environnement pour toutes les applications :
 ```bash
-cp apps/www/.env.example apps/www/.env
 cp apps/admin/.env.example apps/admin/.env
 cp apps/api/.env.example apps/api/.env
-cp apps/assets/.env.example apps/assets/.env
 ```
 
 ### 3. Lancer l'infrastructure
