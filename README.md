@@ -25,24 +25,39 @@ Ce projet est un monorepo géré par [Turborepo](https://turbo.build/) contenant
 - **Yarn**: v1.22+
 - **Docker**: Pour l'infrastructure
 
-### 1. Installation
+### 1. Installation & Récupération de la plateforme
 ```bash
+# Cloner le dépôt Republik pour les assets et la structure de base
+git clone https://github.com/republik/plattform.git mon-blog
+cd mon-blog
+
+# Installer les dépendances du monorepo actuel
 yarn install
 ```
 
-### 2. Lancer l'infrastructure
-Démarrez PostgreSQL, Redis et Elasticsearch :
+### 2. Configuration Environnement (.env)
+Copiez les fichiers d'exemple pour chaque application :
 ```bash
-yarn docker:up
+cp apps/www/.env.example apps/www/.env
+cp apps/publikator/.env.example apps/publikator/.env
+cp apps/admin/.env.example apps/admin/.env
+cp apps/api/.env.example apps/api/.env
+cp apps/assets/.env.example apps/assets/.env
 ```
 
-### 3. Initialiser la base de données
+### 3. Lancer l'infrastructure
+Démarrez PostgreSQL, Redis, Elasticsearch et les services Republik via Docker :
+```bash
+docker compose up -d
+```
+
+### 4. Initialiser la base de données
 Exécutez les migrations et les données de test :
 ```bash
 yarn db:reset
 ```
 
-### 4. Lancer le développement
+### 5. Lancer le développement
 Lancez toutes les applications en mode développement :
 ```bash
 yarn dev
