@@ -54,6 +54,12 @@ Lancez tout le monorepo en une commande :
 yarn dev
 ```
 
+### Connexion App Admin
+```bash
+admin@republik.local
+admin123
+```
+
 Accès :
 - **Web App**: [http://localhost:3000](http://localhost:3000)
 - **Admin App**: [http://localhost:3001](http://localhost:3001)
