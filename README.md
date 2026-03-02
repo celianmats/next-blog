@@ -36,29 +36,26 @@ yarn install
 ```
 
 ### 2. Configuration Environnement (.env)
-Copiez les fichiers d'exemple pour chaque application :
+Configurez automatiquement les fichiers d'environnement pour toutes les applications :
 ```bash
-cp apps/www/.env.example apps/www/.env
-cp apps/publikator/.env.example apps/publikator/.env
-cp apps/admin/.env.example apps/admin/.env
-cp apps/api/.env.example apps/api/.env
-cp apps/assets/.env.example apps/assets/.env
+yarn dev:setup
 ```
 
 ### 3. Lancer l'infrastructure
-Démarrez PostgreSQL, Redis, Elasticsearch et les services Republik via Docker :
+Démarrez les services essentiels (Postgres, Redis, Elasticsearch) :
 ```bash
-docker compose up -d
+yarn docker:up
 ```
 
 ### 4. Initialiser la base de données
-Exécutez les migrations et les données de test :
+Appliquez le schéma initial sans supprimer vos données :
 ```bash
-yarn db:reset
+yarn db:migrate
+yarn db:seed
 ```
 
-### 4. Lancer le développement
-Lancez toutes les applications en mode développement :
+### 5. Lancer le développement
+Lancez tout le monorepo en une commande :
 ```bash
 yarn dev
 ```
