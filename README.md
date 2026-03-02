@@ -57,7 +57,7 @@ Exécutez les migrations et les données de test :
 yarn db:reset
 ```
 
-### 5. Lancer le développement
+### 4. Lancer le développement
 Lancez toutes les applications en mode développement :
 ```bash
 yarn dev
@@ -74,13 +74,11 @@ Accès :
 |----------|-------------|
 | `yarn dev` | Lance tous les services en développement |
 | `yarn build` | Build tous les services pour la production |
-| `yarn lint` | Vérifie le code avec ESLint |
+| `yarn dev:setup` | **Nouveau** : Configure tous les fichiers `.env` |
 | `yarn docker:up` | Démarre les containers Docker |
-| `yarn docker:down` | Arrête et supprime les containers |
-| `yarn docker:clean` | Nettoie les containers et les données |
-| `yarn db:migrate` | Applique les migrations SQL |
+| `yarn db:migrate` | Applique les migrations SQL (recommandé) |
 | `yarn db:seed` | Ajoute les données de démonstration |
-| `yarn db:reset` | Reset complet : clean containers + up + migrate + seed |
+| `yarn db:reset` | **Attention** : Reset complet (supprime toutes les données !) |
 
 ## 🌐 Fonctionnalités Clés
 
